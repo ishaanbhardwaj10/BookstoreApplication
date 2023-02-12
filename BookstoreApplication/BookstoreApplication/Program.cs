@@ -19,6 +19,8 @@ builder.Services.AddCors(options =>
 });
 builder.Services.AddTransient<IUserRL, UserRL>();
 builder.Services.AddTransient<IUserBL, UserBL>();
+builder.Services.AddTransient<IBookRL, BookRL>();
+builder.Services.AddTransient<IBookBL, BookBL>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
