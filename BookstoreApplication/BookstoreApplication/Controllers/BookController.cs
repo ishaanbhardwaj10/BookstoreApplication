@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Interface;
 using CommonLayer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,6 +17,7 @@ namespace BookstoreApplication.Controllers
             this.bookBL = bookBL;
         }
 
+        [Authorize(Roles = Role.Admin)]
         [HttpPost]
         [Route("Add")]
         public IActionResult AddBook(BookModel bookDetails)
@@ -38,6 +40,7 @@ namespace BookstoreApplication.Controllers
             }
         }
 
+        [Authorize(Roles = Role.Admin)]
         [HttpPut]
         [Route("Update")]
         public IActionResult UpdateBook(BookModel bookDetails, int bookId)
@@ -60,6 +63,7 @@ namespace BookstoreApplication.Controllers
             }
         }
 
+        [Authorize(Roles = Role.Admin)]
         [HttpDelete]
         [Route("Delete")]
         public IActionResult DeleteBook(int bookId)
@@ -82,7 +86,7 @@ namespace BookstoreApplication.Controllers
             }
         }
 
-
+        [Authorize]
         [HttpGet]
         [Route("GetAllBooks")]
         public IActionResult GetAllBooks()
@@ -105,6 +109,7 @@ namespace BookstoreApplication.Controllers
             }
         }
 
+        [Authorize]
         [HttpGet]
         [Route("GetBookById")]
         public IActionResult GetBookById(int bookId)

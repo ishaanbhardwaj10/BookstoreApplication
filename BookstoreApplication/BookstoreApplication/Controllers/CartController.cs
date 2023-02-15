@@ -18,7 +18,7 @@ namespace BookstoreApplication.Controllers
             this.cartBL = cartBL;
         }
 
-        [Authorize]
+        [Authorize(Roles = Role.User)]
         [HttpPost]
         [Route("Add")]
         public IActionResult AddToCart(CartModel cartModel)
@@ -42,7 +42,7 @@ namespace BookstoreApplication.Controllers
             }
         }
 
-        [Authorize]
+        [Authorize(Roles = Role.User)]
         [HttpPut]
         [Route("Update")]
         public IActionResult UpdateCart(int cartId, int cartQuantity)
@@ -66,7 +66,7 @@ namespace BookstoreApplication.Controllers
             }
         }
 
-        [Authorize]
+        [Authorize(Roles = Role.User)]
         [HttpDelete]
         [Route("Delete")]
         public IActionResult DeleteCart(int cartId)
@@ -90,7 +90,7 @@ namespace BookstoreApplication.Controllers
             }
         }
 
-        [Authorize]
+        [Authorize(Roles = Role.User)]
         [HttpGet]
         [Route("Get")]
         public IActionResult GetCartById()

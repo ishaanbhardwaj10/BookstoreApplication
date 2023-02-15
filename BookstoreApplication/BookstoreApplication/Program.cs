@@ -26,6 +26,8 @@ builder.Services.AddTransient<IBookRL, BookRL>();
 builder.Services.AddTransient<IBookBL, BookBL>();
 builder.Services.AddTransient<ICartRL, CartRL>();
 builder.Services.AddTransient<ICartBL, CartBL>();
+builder.Services.AddTransient<IAdminRL, AdminRL>();
+builder.Services.AddTransient<IAdminBL, AdminBL>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>

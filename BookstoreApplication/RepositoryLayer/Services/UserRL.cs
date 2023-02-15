@@ -225,6 +225,7 @@ namespace RepositoryLayer.Services
                 {
                     Subject = new ClaimsIdentity(new Claim[]
                     {
+                        new Claim(ClaimTypes.Role, "User"),
                         new Claim(ClaimTypes.Email, EmailID),
                         new Claim("userID", userID)
                     }),
