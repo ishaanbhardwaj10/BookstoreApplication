@@ -34,7 +34,7 @@ namespace RepositoryLayer.Services
                     sqlConnection.Open();
 
                     sqlCommand.Parameters.AddWithValue("@bookId", cartModel.BookId);
-                    sqlCommand.Parameters.AddWithValue("@userID", userID);
+                    sqlCommand.Parameters.AddWithValue("@userId", userID);
                     sqlCommand.Parameters.AddWithValue("@cartQuantity", cartModel.CartQuantity);
                     int result = sqlCommand.ExecuteNonQuery();
                     if(result > 0)
