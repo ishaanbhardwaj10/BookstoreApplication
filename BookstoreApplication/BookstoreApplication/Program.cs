@@ -30,6 +30,8 @@ builder.Services.AddTransient<IAdminRL, AdminRL>();
 builder.Services.AddTransient<IAdminBL, AdminBL>();
 builder.Services.AddTransient<IWishlistRL, WishlistRL>();
 builder.Services.AddTransient<IWishlistBL, WishlistBL>();
+builder.Services.AddTransient<IFeedbackRL, FeedbackRL>();
+builder.Services.AddTransient<IFeedbackBL, FeedbackBL>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>

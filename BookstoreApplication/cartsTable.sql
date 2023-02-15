@@ -32,3 +32,5 @@ AS
 BEGIN
 	DELETE FROM dbo.Carts WHERE CartID=@cartId AND UserID=@userId;
 END
+
+sp_helptext spGetCartByUserId
